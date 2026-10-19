@@ -30,11 +30,19 @@ Nothing to configure. Needs Node 20 or newer on your PATH.
 
 A `PreToolUse` hook on `Bash|PowerShell` (both, because on Windows without Git Bash only PowerShell exists). If a command looks like it can spend credits, the hook answers `ask`, and Claude Code shows its normal approval prompt. Any error inside the hook fails open: the command runs.
 
+## Tested live (headless `claude -p`, Claude Code on Windows, 2026-10-19)
+
+- An unscoped `dbt run` is stopped by the hook in default, `dontAsk` and `bypassPermissions` modes.
+- It is also stopped when a subagent runs the command, in `bypassPermissions` mode.
+- `dbt compile` is not touched by the hook.
+
+Headless mode cannot answer a prompt, so these runs show the hook fires and the command does not run. They do not show the interactive approval dialog.
+
 ## Not verified yet
 
-- What `ask` does when you run in `bypassPermissions` or `dontAsk` mode.
-- Whether the hook fires for commands run by subagents.
-- Windows (PowerShell and Git Bash) is the development machine; macOS and Linux are untested.
+- The interactive approval dialog itself (approving a flagged command and seeing it run).
+- The PowerShell tool path, and Git Bash vs PowerShell on a machine without Git.
+- macOS and Linux (development was on Windows only).
 
 ## Development
 
