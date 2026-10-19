@@ -1,7 +1,7 @@
 {
   "name": "warehouse-brake",
   "version": "0.1.0",
-  "description": "Claude Code plugin that asks before a command can spend Databricks, Snowflake or dbt warehouse credits.",
+  "description": "Claude Code plugin that asks before a command can spend Databricks or Snowflake credits, including through dbt.",
   "license": "MIT",
   "author": {
     "name": "thisismairaj",

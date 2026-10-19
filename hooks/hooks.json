@@ -1,5 +1,5 @@
 {
-  "description": "Asks before a Bash or PowerShell command can spend Databricks, Snowflake or dbt warehouse credits.",
+  "description": "Asks before a Bash or PowerShell command can spend Databricks or Snowflake credits, including through dbt.",
   "hooks": {
     "PreToolUse": [
       {

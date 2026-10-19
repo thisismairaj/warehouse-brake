@@ -1,6 +1,6 @@
 # warehouse-brake
 
-A Claude Code plugin that **asks before Claude runs a command that can spend Databricks, Snowflake or dbt warehouse credits.**
+A Claude Code plugin that **asks before Claude runs a command that can spend Databricks or Snowflake credits, including through dbt.**
 
 It only guards commands Claude runs. It does not guard notebooks, scheduled jobs, or you typing in a terminal. And it reads command text, so it catches well-known shapes, not everything. It is a speed bump, not a security boundary.
 
