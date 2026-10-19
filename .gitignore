@@ -1,0 +1,11 @@
+# working notes: kept local, not shown publicly
+docs/
+
+content/
+
+.claude-brain/
+
+.scaffold.md
+
+node_modules/
+*.log

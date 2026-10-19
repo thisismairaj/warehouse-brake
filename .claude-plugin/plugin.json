@@ -1,0 +1,7 @@
+{
+  "name": "warehouse-brake",
+  "version": "0.1.0",
+  "description": "Asks before Claude runs a command that can spend Databricks, Snowflake or dbt warehouse credits.",
+  "author": { "name": "thisismairaj", "url": "https://github.com/thisismairaj" },
+  "license": "MIT"
+}

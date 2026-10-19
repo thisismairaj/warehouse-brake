@@ -1,0 +1,10 @@
+{
+  "name": "warehouse-brake",
+  "description": "Asks before Claude runs a command that can spend Databricks, Snowflake or dbt warehouse credits.",
+  "owner": { "name": "thisismairaj", "url": "https://github.com/thisismairaj" },
+  "plugins": [{
+    "name": "warehouse-brake",
+    "source": "./",
+    "description": "Asks before Claude runs a command that can spend Databricks, Snowflake or dbt warehouse credits."
+  }]
+}
