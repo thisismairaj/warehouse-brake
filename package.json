@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "Claude Code plugin that asks before a command can spend Databricks, Snowflake or dbt warehouse credits.",
   "license": "MIT",
-  "author": "thisismairaj",
+  "author": {
+    "name": "thisismairaj",
+    "url": "https://github.com/thisismairaj"
+  },
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -12,5 +15,33 @@
   "devDependencies": {
     "@types/node": "^24.0.0",
     "typescript": "^5.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisismairaj/warehouse-brake.git"
+  },
+  "homepage": "https://github.com/thisismairaj/warehouse-brake#readme",
+  "bugs": {
+    "url": "https://github.com/thisismairaj/warehouse-brake/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "claude-code",
+    "claude-code-plugin",
+    "databricks",
+    "snowflake",
+    "dbt",
+    "finops",
+    "data-engineering",
+    "hook"
+  ],
+  "files": [
+    "dist",
+    ".claude-plugin",
+    "hooks",
+    "README.md",
+    "LICENSE"
+  ]
 }

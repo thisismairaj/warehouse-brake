@@ -4,7 +4,7 @@ A Claude Code plugin that **asks before Claude runs a command that can spend Dat
 
 It only guards commands Claude runs. It does not guard notebooks, scheduled jobs, or you typing in a terminal. And it reads command text, so it catches well-known shapes, not everything. It is a speed bump, not a security boundary.
 
-## Why
+## Why this matters
 
 Cloud data platforms bill by compute time, and the controls are mostly after the fact. A Databricks budget is an email alert that can arrive up to a day late; it does not stop anything. A coding agent can start a warehouse or run a whole dbt project in one line. This asks you first.
 
