@@ -4,6 +4,10 @@ A Claude Code plugin that **asks before Claude runs a command that can spend Dat
 
 It only guards commands Claude runs. It does not guard notebooks, scheduled jobs, or you typing in a terminal. And it reads command text, so it catches well-known shapes, not everything. It is a speed bump, not a security boundary.
 
+![The approval prompt Claude Code shows when warehouse-brake catches an unscoped dbt run](https://raw.githubusercontent.com/thisismairaj/warehouse-brake/main/assets/approval-prompt.png)
+
+This is what you see when Claude tries to run `dbt run` with no `--select`: the command stops until you approve it.
+
 ## Why this matters
 
 Cloud data platforms bill by compute time, and the controls are mostly after the fact. A Databricks budget is an email alert that can arrive up to a day late; it does not stop anything. A coding agent can start a warehouse or run a whole dbt project in one line. This asks you first.
@@ -30,7 +34,7 @@ Nothing to configure. Needs Node 20 or newer on your PATH.
 
 A `PreToolUse` hook on `Bash|PowerShell` (both, because on Windows without Git Bash only PowerShell exists). If a command looks like it can spend credits, the hook answers `ask`, and Claude Code shows its normal approval prompt. Any error inside the hook fails open: the command runs.
 
-## Tested live (headless `claude -p`, Claude Code on Windows, 2026-10-19)
+## Tested live (headless `claude -p`, Claude Code on Windows)
 
 - An unscoped `dbt run` is stopped by the hook in default, `dontAsk` and `bypassPermissions` modes.
 - It is also stopped when a subagent runs the command, in `bypassPermissions` mode.
